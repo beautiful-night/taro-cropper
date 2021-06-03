@@ -3,7 +3,7 @@ import {Canvas, CoverView, View} from '@tarojs/components';
 import './index.scss';
 // @ts-ignore
 import {CanvasTouch, CanvasTouchEvent} from "@tarojs/components/types/common";
-import {CSSProperties} from "react";
+import {CSSProperties, PureComponent} from "react";
 import {easySetFillStyle, easySetLineWidth, easySetStrokeStyle} from "./canvas-util";
 
 
@@ -33,7 +33,7 @@ interface TaroCropperComponentState {
   scale: number,
 }
 
-class TaroCropperComponent extends Taro.PureComponent<TaroCropperComponentProps, TaroCropperComponentState> {
+class TaroCropperComponent extends PureComponent<TaroCropperComponentProps, TaroCropperComponentState> {
 
   static defaultProps = {
     width: 750,
